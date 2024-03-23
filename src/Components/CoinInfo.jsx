@@ -9,7 +9,7 @@ const CoinInfo = ({image, name, symbol}) => {
     useEffect(() => {
 
         const getCoinPrice = async() => {
-
+            await new Promise(resolve => setTimeout(resolve, 1000));
             const response = await fetch(
                 `https://min-api.cryptocompare.com/data/price?fsym=${symbol}&tsyms=USD&api_key=` +
                   API_KEY
